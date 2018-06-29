@@ -14,7 +14,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 /**
- *
+ *Esta clase pretende construir un Bean para incluir
+ * imágenes
  * @author Nahuel E Correa
  * 
  */
@@ -26,6 +27,12 @@ public class BeanImageVisor extends JLabel{
         
     }
     
+    /**
+     * Método clave para escoger imagen desde una ruta del HHD
+     * @param elegirImagen.
+     * Este parámetro te permitrirá escoger una imagen
+     * 
+     */
     public void setescogeimagen(String elegirImagen){
         
         try{
@@ -45,6 +52,13 @@ public class BeanImageVisor extends JLabel{
         
     }
     
+    /**
+     * 
+     * @return.
+     * Este método devuelve la ruta de a imagen escogida
+     * con setEscigeImagen
+     * 
+     */
     public String getEscogeImagen(){
         
         if(archivo == null) return null;
@@ -57,6 +71,12 @@ public class BeanImageVisor extends JLabel{
         
         return new Dimension(600, 400);
     }
+    
+    /**
+     * El tamaño máximo de megas
+     * @param No recibe parámetro alguno
+     */
+    public static int PruebaConstante=5;
     
     private File archivo = null;
 }
